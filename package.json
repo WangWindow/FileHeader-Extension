@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/WangWindow/FileHeader-Extension/issues"
   },
+  "icon": "assets/icon.png",
   "galleryBanner": {
     "color": "#2F363D",
     "theme": "dark"
