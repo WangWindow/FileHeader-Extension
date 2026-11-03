@@ -1,0 +1,13 @@
+{
+  "displayName": "文件头部注释",
+  "description": "插入并自动维护文件头部注释，支持函数注释和参数自动提取。",
+  "config.title": "文件头部注释",
+  "config.customMade.desc": "文件头部注释的自定义字段。支持 'git config user.name' 等 git 取值，以及 '${now_year}' 等模板变量。",
+  "config.cursorMode.desc": "函数注释的自定义字段，默认字段为 description、param 和 return。",
+  "config.configObj.desc": "注释生成、自动添加、语言符号和函数参数提取的详细配置。",
+  "command.category": "文件头部注释",
+  "command.insertHeader": "插入文件头部注释",
+  "command.insertFunctionComment": "插入函数注释",
+  "command.setErrorLogPath": "设置错误日志路径",
+  "command.nextLine": "光标移动到下一行"
+}

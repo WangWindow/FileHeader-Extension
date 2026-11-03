@@ -1,0 +1,208 @@
+{
+  "name": "fileheader-extension",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "5.0.0",
+  "publisher": "WangWindow",
+  "author": {
+    "name": "WangWindow",
+    "url": "https://github.com/WangWindow"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/WangWindow/FileHeader-Extension#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WangWindow/FileHeader-Extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WangWindow/FileHeader-Extension/issues"
+  },
+  "galleryBanner": {
+    "color": "#2F363D",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "annotation",
+    "comment",
+    "file header",
+    "fileheader",
+    "function comment",
+    "vscode"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "l10n": "./l10n",
+  "packageManager": "bun@1.4.4",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "%config.title%",
+      "properties": {
+        "fileheader.customMade": {
+          "type": "object",
+          "default": {},
+          "description": "%config.customMade.desc%"
+        },
+        "fileheader.cursorMode": {
+          "type": "object",
+          "default": {},
+          "description": "%config.cursorMode.desc%"
+        },
+        "fileheader.configObj": {
+          "type": "object",
+          "default": {
+            "language": {},
+            "autoAdd": true,
+            "autoAddLine": 100,
+            "autoAlready": true,
+            "annotationStr": {
+              "head": "/*",
+              "middle": " * @",
+              "end": " */",
+              "use": false
+            },
+            "headInsertLine": {
+              "php": 2,
+              "sh": 2
+            },
+            "beforeAnnotation": {},
+            "afterAnnotation": {},
+            "specialOptions": {},
+            "switch": {
+              "newlineAddAnnotation": true
+            },
+            "supportAutoLanguage": [],
+            "prohibitAutoAdd": [
+              "json"
+            ],
+            "folderBlacklist": [
+              "node_modules"
+            ],
+            "prohibitItemAutoAdd": [],
+            "moveCursor": true,
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "atSymbol": [
+              "@",
+              "@"
+            ],
+            "atSymbolObj": {},
+            "colon": [
+              ": ",
+              ": "
+            ],
+            "colonObj": {},
+            "filePathColon": "路径分隔符替换",
+            "showErrorMessage": false,
+            "writeLog": false,
+            "wideSame": false,
+            "wideNum": 13,
+            "functionWideNum": 0,
+            "CheckFileChange": false,
+            "createHeader": false,
+            "useWorker": false,
+            "cursorModeInternalAll": {},
+            "openFunctionParamsCheck": true,
+            "functionParamsShape": [
+              "{",
+              "}"
+            ],
+            "functionBlankSpaceAll": {},
+            "functionTypeSymbol": "*",
+            "typeParamOrder": "type param",
+            "customHasHeadEnd": {},
+            "throttleTime": 60000,
+            "functionParamAddStr": "",
+            "NoMatchParams": "no show param",
+            "createFileTime": true
+          },
+          "description": "%config.configObj.desc%"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.fileheader",
+        "title": "%command.insertHeader%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "extension.cursorTip",
+        "title": "%command.insertFunctionComment%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "fileheader.errPathSet",
+        "title": "%command.setErrorLogPath%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "fileheader.table",
+        "title": "%command.nextLine%",
+        "category": "%command.category%"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.fileheader",
+        "key": "ctrl+win+i",
+        "mac": "ctrl+cmd+i",
+        "linux": "ctrl+meta+i",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.cursorTip",
+        "key": "ctrl+win+t",
+        "mac": "ctrl+cmd+t",
+        "linux": "ctrl+meta+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "fileheader.table",
+        "key": "alt+y",
+        "mac": "cmd+y",
+        "linux": "meta+y",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "bun run package",
+    "copy-assets": "bun run scripts/copy-assets.ts",
+    "compile": "bun run copy-assets && bun build src/extension.ts --outfile dist/extension.js --target node --format cjs --external vscode --sourcemap=inline",
+    "watch": "bun run copy-assets && bun build src/extension.ts --outfile dist/extension.js --target node --format cjs --external vscode --sourcemap=inline --watch",
+    "package": "bun run copy-assets && bun build src/extension.ts --outfile dist/extension.js --target node --format cjs --external vscode --minify",
+    "check-types": "tsc --noEmit",
+    "lint": "biome check src test scripts",
+    "lint:fix": "biome check --write src test scripts",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "test": "bun run copy-assets && bun test",
+    "vsce:package": "vsce package --no-dependencies"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.23"
+  },
+  "devDependencies": {
+    "@ast-grep/wasm": "^0.51.1",
+    "@biomejs/biome": "^2.6.4",
+    "@repomix/tree-sitter-wasms": "^0.1.17",
+    "@types/bun": "^1.4.4",
+    "@types/node": "^20.19.0",
+    "@types/vscode": "1.85.0",
+    "@vscode/vsce": "^3.9.2",
+    "typescript": "^5.9.3",
+    "web-tree-sitter": "^0.27.1"
+  },
+  "trustedDependencies": [
+    "@vscode/vsce-sign",
+    "keytar"
+  ]
+}

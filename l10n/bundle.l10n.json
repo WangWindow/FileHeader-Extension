@@ -1,0 +1,15 @@
+{
+  "File Header: no active editor.": "File Header: no active editor.",
+  "File Header: setting saved.": "File Header: setting saved.",
+  "File Header: failed to set the error log path.": "File Header: failed to set the error log path.",
+  "File Header: failed to insert the file header.": "File Header: failed to insert the file header.",
+  "File Header: failed to insert the function comment.": "File Header: failed to insert the function comment.",
+  "File Header: failed to update the file header.": "File Header: failed to update the file header.",
+  "File Header: failed to add the file header automatically.": "File Header: failed to add the file header automatically.",
+  "File Header: unexpected error.": "File Header: unexpected error.",
+  "File Header: please set the error log directory first.": "File Header: please set the error log directory first.",
+  "File Header: the error log directory does not exist.": "File Header: the error log directory does not exist.",
+  "File Header: the file was restored because only the header changed.": "File Header: the file was restored because only the header changed.",
+  "This is the default setting. Configure fileheader.customMade.": "This is the default setting. Configure fileheader.customMade.",
+  "File Header: git is not available: {0}": "File Header: git is not available: {0}"
+}

@@ -1,0 +1,13 @@
+{
+  "displayName": "File Header",
+  "description": "Insert and maintain file header comments, and generate function comments with parameter extraction.",
+  "config.title": "File Header",
+  "config.customMade.desc": "Custom fields for the file header comment. Supports git values such as 'git config user.name' and template variables such as '${now_year}'.",
+  "config.cursorMode.desc": "Custom fields for function comments. The default fields are description, param and return.",
+  "config.configObj.desc": "Detailed options for comment generation, auto add behaviour, language symbols and function parameter extraction.",
+  "command.category": "File Header",
+  "command.insertHeader": "Insert File Header",
+  "command.insertFunctionComment": "Insert Function Comment",
+  "command.setErrorLogPath": "Set Error Log Path",
+  "command.nextLine": "Move Selection to Next Line"
+}

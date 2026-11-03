@@ -1,0 +1,15 @@
+{
+  "File Header: no active editor.": "文件头部注释：没有打开的文件。",
+  "File Header: setting saved.": "文件头部注释：设置已保存。",
+  "File Header: failed to set the error log path.": "文件头部注释：设置错误日志路径失败。",
+  "File Header: failed to insert the file header.": "文件头部注释：插入文件头部注释失败。",
+  "File Header: failed to insert the function comment.": "文件头部注释：插入函数注释失败。",
+  "File Header: failed to update the file header.": "文件头部注释：更新文件头部注释失败。",
+  "File Header: failed to add the file header automatically.": "文件头部注释：自动添加文件头部注释失败。",
+  "File Header: unexpected error.": "文件头部注释：发生未知错误。",
+  "File Header: please set the error log directory first.": "文件头部注释：请先设置错误日志目录。",
+  "File Header: the error log directory does not exist.": "文件头部注释：设置的错误日志目录不存在。",
+  "File Header: the file was restored because only the header changed.": "文件头部注释：文件只修改了头部注释，已自动还原。",
+  "This is the default setting. Configure fileheader.customMade.": "这是默认配置，请设置 fileheader.customMade。",
+  "File Header: git is not available: {0}": "文件头部注释：无法执行 git：{0}"
+}
